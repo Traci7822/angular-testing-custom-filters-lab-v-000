@@ -7,4 +7,10 @@ describe('removeAllVowels Filter', function () {
 		$filter = $injector.get('$filter');
 	}));
 
+	it('should return a vowelless string', function() {
+		var string = 'this is a string';
+		var results = $filter('removeAllVowels')(string);
+		expect(results).toEqual('ths s  strng');
+	});
+
 });
